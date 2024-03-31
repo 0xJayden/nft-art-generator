@@ -2,20 +2,21 @@ const basePath = process.cwd();
 const { MODE } = require(`${basePath}/constants/blend_mode.js`);
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 
-const network = NETWORK.eth;
+const network = NETWORK.sol;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
+const namePrefix = "Paingelz";
+const description = "Feel the pain. Embrace the pain. Be the pain.";
 const baseUri = "ipfs://NewUriToReplace";
 
+// Edit
 const solanaMetadata = {
-  symbol: "YC",
-  seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  symbol: "PGZ",
+  seller_fee_basis_points: 600, // Define how much % you want from secondary market sales 1000 = 10%
+  external_url: "https://paingelz.vercel.app",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "GgKt7kZNTQmi8J3TPPay7bk2G1VtJsV8gipfzyGajm8Z",
       share: 100,
     },
   ],
@@ -24,15 +25,17 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 10,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Backgrounds" },
+      { name: "Wings" },
+      { name: "Skins" },
+      { name: "Face tats" },
+      { name: "Shirts" },
+      { name: "Mouth" },
+      { name: "Noses" },
+      { name: "Eyes" },
+      { name: "Hair" },
     ],
   },
 ];
@@ -42,8 +45,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 2500,
+  height: 2500,
   smoothing: false,
 };
 
